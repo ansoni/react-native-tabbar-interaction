@@ -1,12 +1,15 @@
 {
   "name": "@mindinventory/react-native-tab-bar-interaction",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tabbar component for React Native",
   "main": "TabBar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mindinventory",
+  "contributors": [
+    "Cyrille Tischenbach <cyrille.tischenbach@gmail.com>"
+  ],
   "keywords": [
     "react-native",
     "basic-components",

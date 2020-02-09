@@ -37,12 +37,13 @@ export default class TabBar extends Component{
     constructor(props) {
         super(props);
 
-        if (this.props.children.length !== 3) {
+        if (this.props.children.length !== 5) {
             throw new Error('Three tab should be work.');
         }
+
         this.state = {
-            selectedIndex: 1,
-            defaultPage: 1,
+            selectedIndex: 2,
+            defaultPage: 2,
             navFontSize: 12,
             navTextColor: 'rgb(148, 148, 148)',
             navTextColorSelected: 'rgb(51, 163, 244)',
@@ -106,7 +107,7 @@ export default class TabBar extends Component{
                                             source={child.props.selectedIcon}
                                         />
                                     </View>
-                                :
+                                    :
                                     <Image
                                         style={styles.navImage}
                                         resizeMode="cover"
@@ -130,13 +131,13 @@ export default class TabBar extends Component{
                             fill={bgNavBar ? bgNavBar : '#f0f0f0'}
                             stroke={stroke ? stroke : '#f0f0f0'}
                             d={ `M30,60h${this.state.pathX}.3c17.2,0,31,14.4,30,31.6c-0.2,2.7-0.3,5.5-0.3,8.2c0,71.2,58.1,129.6,129.4,130c72.1,0.3,130.6-58,130.6-130c0-2.7-0.1-5.4-0.2-8.1C${this.state.pathY}.7,74.5,${this.state.pathA}.5,60,${this.state.pathB}.7,60H1062c16.6,0,30,13.4,30,30v94c0,42-34,76-76,76H76c-42,0-76-34-76-76V90C0,73.4,13.4,60,30,60z`
-                        }/>
+                            }/>
                         <AnimatedCircle
                             ref={ ref => this._myCircle = ref }
                             fill={bgNavBarSelector ? bgNavBarSelector : '#f0f0f0'}
                             stroke={stroke ? stroke : '#f0f0f0'}
                             cx="546" cy="100"
-                            r="100"
+                            r="90"
                         />
                     </Svg>
                 </View>
@@ -153,23 +154,25 @@ export default class TabBar extends Component{
         });
 
         if (index === 0){
-            Animated.spring( that.state.pathD, { toValue: 22,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.pathD, { toValue: -5,duration: 10, friction: 10 }).start();
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 211, friction: 10 } ).start();
-        } else if (index === 2){
-            Animated.spring( that.state.pathD, { toValue: 691,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.circleRadius, { toValue: 185, friction: 10 } ).start();
+
+        } else if (index === 1){
+            Animated.spring( that.state.pathD, { toValue: 175,duration: 10, friction: 10 }).start();
 
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 880, friction: 10 } ).start();
-        } else {
+            Animated.spring( that.state.circleRadius, { toValue: 365, friction: 10 } ).start();
+
+        }else if (index === 2){
             Animated.spring( that.state.pathD, { toValue: 357,duration: 10, friction: 10 }).start();
 
             setTimeout(function() {
@@ -178,6 +181,26 @@ export default class TabBar extends Component{
                 });
             }, 100);
             Animated.spring( that.state.circleRadius, { toValue: 546, friction: 10 } ).start();
+
+        }else if (index === 3){
+            Animated.spring( that.state.pathD, { toValue: 535,duration: 10, friction: 10 }).start();
+
+            setTimeout(function() {
+                that.setState({
+                    showIcon: true,
+                });
+            }, 100);
+            Animated.spring( that.state.circleRadius, { toValue: 725, friction: 10 } ).start();
+        } else {
+
+            Animated.spring( that.state.pathD, { toValue: 720,duration: 10, friction: 10 }).start();
+
+            setTimeout(function() {
+                that.setState({
+                    showIcon: true,
+                });
+            }, 100);
+            Animated.spring( that.state.circleRadius, { toValue: 910, friction: 10 } ).start();
         }
     }
 }
@@ -192,17 +215,17 @@ const styles = StyleSheet.create({
     content: {
         flexDirection:'column',
         zIndex: 0,
-        width: (Dimensions.get('window').width - 30),
-        marginBottom: '4%',
-        left: '4%',
-        right: '4%',
+        width: (Dimensions.get('window').width - 15),
+        marginBottom: '2%',
+        left: '2%',
+        right: '2%',
         position: 'absolute',
         bottom: '1%',
     },
     subContent: {
         flexDirection: 'row',
-        marginLeft: 15,
-        marginRight: 15,
+        marginLeft: 35,
+        marginRight: 35,
         marginBottom: 10,
         zIndex: 1,
         position: 'absolute',
@@ -211,13 +234,14 @@ const styles = StyleSheet.create({
     navItem: {
         flex: 1,
         paddingTop: 6,
-        paddingBottom: 6,
+        paddingBottom: 10,
         alignItems: 'center',
         zIndex: 0,
+        //backgroundColor: 'pink'
     },
     navImage: {
-        width: 45,
-        height: 45,
+        width: 35,
+        height: 35,
     },
     circle: {
         bottom: 18,
