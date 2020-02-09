@@ -1,3 +1,7 @@
+This package is a fork from https://github.com/Mindinventory/react-native-tabbar-interaction
+
+It accepts 5 icons instead of 3
+
 # React Native Tabbar Interaction
 
 Beautiful Tabbar Interaction with Sliding Inset FABs,

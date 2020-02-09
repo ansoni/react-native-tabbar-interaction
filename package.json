@@ -1,5 +1,5 @@
 {
-  "name": "@mindinventory/react-native-tab-bar-interaction",
+  "name": "@tisch7/react-native-tab-bar-interaction",
   "version": "1.0.4",
   "description": "A tabbar component for React Native",
   "main": "TabBar.js",
