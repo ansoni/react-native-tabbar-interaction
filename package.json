@@ -29,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Mindinventory/react-native-tab-bar-interaction.git"
+    "url": "git+ssh://git@github.com/tisch007/react-native-tabbar-interaction.git"
   },
   "bugs": {
-    "url": "https://github.com/Mindinventory/react-native-tab-bar-interaction/issues"
+    "url": "https://github.com/tisch007/react-native-tabbar-interaction/issues"
   },
-  "homepage": "https://github.com/Mindinventory/react-native-tab-bar-interaction#readme"
+  "homepage": "https://github.com/tisch007/react-native-tabbar-interaction#readme"
 }
