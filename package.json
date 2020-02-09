@@ -1,6 +1,6 @@
 {
   "name": "@tisch7/react-native-tab-bar-interaction",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A tabbar component for React Native",
   "main": "TabBar.js",
   "scripts": {
