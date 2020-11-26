@@ -154,53 +154,53 @@ export default class TabBar extends Component{
         });
 
         if (index === 0){
-            Animated.spring( that.state.pathD, { toValue: -5,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.pathD, { toValue: -5,duration: 10, friction: 10, useNativeDriver: true, }).start();
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 185, friction: 10 } ).start();
+            Animated.spring( that.state.circleRadius, { toValue: 185, friction: 10, useNativeDriver: true, } ).start();
 
         } else if (index === 1){
-            Animated.spring( that.state.pathD, { toValue: 175,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.pathD, { toValue: 175,duration: 10, friction: 10, useNativeDriver: true, }).start();
 
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 365, friction: 10 } ).start();
+            Animated.spring( that.state.circleRadius, { toValue: 365, friction: 10, useNativeDriver: true, } ).start();
 
         }else if (index === 2){
-            Animated.spring( that.state.pathD, { toValue: 357,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.pathD, { toValue: 357,duration: 10, friction: 10, useNativeDriver: true, }).start();
 
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 546, friction: 10 } ).start();
+            Animated.spring( that.state.circleRadius, { toValue: 546, friction: 10, useNativeDriver: true, } ).start();
 
         }else if (index === 3){
-            Animated.spring( that.state.pathD, { toValue: 535,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.pathD, { toValue: 535,duration: 10, friction: 10, useNativeDriver: true, }).start();
 
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 725, friction: 10 } ).start();
+            Animated.spring( that.state.circleRadius, { toValue: 725, friction: 10, useNativeDriver: true, } ).start();
         } else {
 
-            Animated.spring( that.state.pathD, { toValue: 720,duration: 10, friction: 10 }).start();
+            Animated.spring( that.state.pathD, { toValue: 720,duration: 10, friction: 10, useNativeDriver: true, }).start();
 
             setTimeout(function() {
                 that.setState({
                     showIcon: true,
                 });
             }, 100);
-            Animated.spring( that.state.circleRadius, { toValue: 910, friction: 10 } ).start();
+            Animated.spring( that.state.circleRadius, { toValue: 910, friction: 10, useNativeDriver: true, } ).start();
         }
     }
 }
